@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from datetime import timedelta
 
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 # Secret key for session management (necessary for using sessions)
 app.secret_key = 'your_secret_key'
@@ -79,6 +79,6 @@ def logout():
 
 # Run the app if this script is executed directly
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8000, debug=True)  # Running on port 8000
+    app.run(debug=True)
 
 # alternatively, you can run the app in terminal by python -m flask --app board run --port 8000 --debug
