@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from datetime import timedelta
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Secret key for session management (necessary for using sessions)
 app.secret_key = 'your_secret_key'
